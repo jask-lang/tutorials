@@ -1,0 +1,50 @@
+; --- 1. Primitive Data Types ---
+
+set myString  = "Hello, jask!"   ; String
+set myNumber  = 42               ; Number (Integer or Floating-point)
+set myBool    = true             ; Boolean (true / false)
+
+printLine("--- Data Types ---")
+print("String:  ")
+printLine(myString)
+
+print("Number:  ")
+printLine(myNumber)
+
+print("Boolean: ")
+printLine(myBool)
+
+printLine("")
+
+; --- 2. Arithmetic Operators ---
+
+set a = 10
+set b = 4
+
+set sum        = a + b           ; Addition (14)
+set difference = a - b           ; Subtraction (6)
+set product    = a * b           ; Multiplication (40)
+set quotient   = a / b           ; Division (2.5)
+set remainder  = a % b           ; Modulo / Remainder (2)
+
+printLine("--- Math Operations ---")
+print("10 + 4 = ")
+printLine(sum)
+
+print("10 - 4 = ")
+printLine(difference)
+
+print("10 * 4 = ")
+printLine(product)
+
+print("10 / 4 = ")
+printLine(quotient)
+
+print("10 % 4 = ")
+printLine(remainder)
+
+printLine("")
+
+printLine("--- String concat ---")
+set myConcatedStr = "I " + " am " + "concatenated!"
+printLine(myConcatedStr)
