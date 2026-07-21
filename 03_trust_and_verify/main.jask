@@ -1,0 +1,15 @@
+set rawInput = readInput("Please enter your name: ")
+set name = verify(untrusted = rawInput, pattern = "string")
+
+print("Oh Hello, " + name + "! ")
+
+set age = trust(readInput("How old are you, " + name + "? "))
+
+; note that this will fail if the user entered anything else than a number
+set age = toNumber(age)
+
+if age > 100
+    printLine("Wow! That is a very respectable age!")
+else
+    printLine(age + " years? OK, noted!")
+endif
