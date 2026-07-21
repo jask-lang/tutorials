@@ -1,15 +1,15 @@
 # Lesson 2: Variables and Types
 In jask, variables are created and changed explicitly using `set`:
-```
+```python
 set myVar = 5
 ```
 A variable can change its type dynamically during runtime:
-```
+```python
 set myVar = 5
 set myVar = "Hello..."
 ```
 If you want to prevent this, `restrict` your variable:
-```
+```python
 set myVar = 5
 restrict myVar
 
@@ -24,7 +24,7 @@ Jask knows the following primitive types of data:
 * `any` which is a placeholder for any kind of data
 
 If you want to know the type of a variable, use `type()`, which will return the type of the variable as a string:
-```
+```python
 set myVar = 5
 print(type(myVar)) ; <-- this will print 'number'
 ```
