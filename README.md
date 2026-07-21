@@ -3,7 +3,7 @@ Welcome to **jask** – a highly readable and safe interpreted language.
 This tutorial will guide you step-by-step through the language using practical, runnable examples.
 
 ## 🛠️ Prerequisites
-Make sure you clone the interpreter repository and that it is ready to run:
+Make sure you clone the [interpreter repository](https://github.com/jask-lang/interpreter) and that it is ready to run:
 ```bash
 dotnet run --version
 ```
