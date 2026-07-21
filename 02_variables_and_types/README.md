@@ -34,3 +34,6 @@ The interpreter needs the *allow-stdout* permission, because we are using *print
 ```bash
 dotnet --allow-stdout --input="main.jask"
 ```
+
+## Continue...
+After mastering basic variable types, have a look at [trust and verify](https://github.com/jask-lang/tutorials/tree/main/03_trust_and_verify)!
