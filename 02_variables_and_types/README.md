@@ -23,6 +23,12 @@ Jask knows the following primitive types of data:
 * `boolean` can be `true` or `false`
 * `any` which is a placeholder for any kind of data
 
+If you want to know the type of a variable, use `type()`, which will return the type of the variable as a string:
+```
+set myVar = 5
+print(type(myVar)) ; <-- this will print 'number'
+```
+
 ## Run
 The interpreter needs the *allow-stdout* permission, because we are using *print* and *printLine* in this example.
 ```bash
