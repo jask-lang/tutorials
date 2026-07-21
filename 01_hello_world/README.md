@@ -14,3 +14,6 @@ The interpreter needs the *allow-stdout* permission, because we are using *print
 ```bash
 dotnet --allow-stdout --input="main.jask"
 ```
+
+## Continue...
+After mastering *print* and *printLine*, have a look at [variables and types](https://github.com/jask-lang/tutorials/tree/main/02_variables_and_types)!
