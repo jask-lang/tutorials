@@ -1,15 +1,25 @@
 set rawInput = readInput("Please enter your name: ")
 set name = verify(untrusted = rawInput, pattern = "string")
 
-print("Oh Hello, " + name + "! ")
+if name->type == "OK"
+    print("Your name is " + name->value + ". ")
+else
+    print("Error reading from stdin: " + name->error)
+endif
 
-set age = trust(readInput("How old are you, " + name + "? "))
+set age = trust(readInput("How old are you, " + name->value + "? "))
 
 ; note that this will fail if the user entered anything else than a number
+; because trust() will create a string representation based on readInput()
 set age = toNumber(age)
 
+; the following code relies on age being a number
+; this shows that using trust() is not safe
 if age > 100
     printLine("Wow! That is a very respectable age!")
 else
     printLine(age + " years? OK, noted!")
 endif
+
+; a quick example on how to verify an untrusted value with a pattern
+printLine("Verified age: " + verify(untrusted = untrust(age), pattern = "number"))
