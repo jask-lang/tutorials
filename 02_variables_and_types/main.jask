@@ -48,3 +48,18 @@ printLine("")
 printLine("--- String concat ---")
 set myConcatedStr = "I " + " am " + "concatenated!"
 printLine(myConcatedStr)
+printLine("")
+
+printLine("--- Struct examples ---")
+
+struct Car
+    set brand = ""
+    set model = ""
+    set hp = 0
+endstruct
+
+set myCar = Car(brand = "Mercedes Benz", model = "R170", hp = 218)
+printLine("I am driving a " + myCar->brand + " with " + myCar->hp + " horse power.")
+
+set myCar = myCar update hp = 340
+printLine("Now, my car has " + myCar->hp + " horse power!")
