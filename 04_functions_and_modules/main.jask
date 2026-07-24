@@ -1,0 +1,11 @@
+use "my_math_functions" as math
+
+; prints 180€, default value of param 'percent' is 10
+printLine("Your discount is "
+    + math::calculateDiscount(price = 200)
+    + "€")
+
+; prints 160€
+printLine("Your discount is "
+    + math::calculateDiscount(price = 200, percent = 20)
+    + "€")

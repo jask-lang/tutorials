@@ -46,3 +46,5 @@ The interpreter needs the *allow-stdout* as well as *allow-stdin* and *allow-tru
 ```bash
 dotnet --allow-stdout --allow-stdin --allow-trust --input="main.jask"
 ```
+# Continue...
+After mastering *trust* and *verify*, have a look at [functions and modules](https://github.com/jask-lang/tutorials/tree/main/04_functions_and_modules)!
