@@ -29,11 +29,11 @@ set myVar = 5
 print(type(myVar)) ; <-- this will print 'number'
 ```
 
-## Run
+# Run
 The interpreter needs the *allow-stdout* permission, because we are using *print* and *printLine* in this example.
 ```bash
 dotnet --allow-stdout --input="main.jask"
 ```
 
-## Continue...
+# Continue...
 After mastering basic variable types, have a look at [trust and verify](https://github.com/jask-lang/tutorials/tree/main/03_trust_and_verify)!

@@ -41,7 +41,7 @@ set age = trust(readInput("Enter only a number and nothing else please!"))
 Note, that `trust` returns the string representation or throws a runtime error in case of failures.
 In order to use `trust`, the interpreter needs the corresponding permission `--allow-trust`.
 
-## Run
+# Run
 The interpreter needs the *allow-stdout* as well as *allow-stdin* and *allow-trust* permissions, because we are using *print*, *printLine*, *readInput* and *trust* in this example.
 ```bash
 dotnet --allow-stdout --allow-stdin --allow-trust --input="main.jask"

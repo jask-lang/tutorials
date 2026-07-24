@@ -9,11 +9,11 @@ You can use two functions for printing text to the console:
 
 These are the two basic functions for stdout.
 
-## Run
+# Run
 The interpreter needs the *allow-stdout* permission, because we are using *print* and *printline*.
 ```bash
 dotnet --allow-stdout --input="main.jask"
 ```
 
-## Continue...
+# Continue...
 After mastering *print* and *printLine*, have a look at [variables and types](https://github.com/jask-lang/tutorials/tree/main/02_variables_and_types)!
