@@ -9,3 +9,9 @@ printLine("Your discount is "
 printLine("Your discount is "
     + math::calculateDiscount(price = 200, percent = 20)
     + "€")
+
+use "jcore/math" as jmath
+use "jcore/date" as jdate
+
+printLine(unfoldModule(jmath))
+printLine(unfoldModule(jdate))

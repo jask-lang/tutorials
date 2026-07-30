@@ -44,6 +44,19 @@ use "my_math_functions" as math
 printLine("Your discount is " + math::calculateDiscount(price = 200.123, percent = 20))
 ```
 
+# jcore
+jcore are modules for different purposes directly provided by the jask developers.
+The jcore modules are embedded into the interpreters executable, so one can use them directly:
+```python
+use "jcore/math" as math
+use "jcore/date" as date
+
+printLine(unfoldModule(math))
+```
+`unfoldModule` gives you a string containing all functions a module is providing.
+Use it to explore the module, alternatively, you can check out the [implementation of jcore](https://github.com/jask-lang/jcore).
+
+
 # Run
 The interpreter needs the *allow-stdout* permission, because we are using *print* and *printLine* in this example.
 ```bash
