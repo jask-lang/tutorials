@@ -22,4 +22,4 @@ For example, run tutorial 01 from your *interpreter* directory:
 ```bash
 dotnet run --allow-stdout --input="../tutorials/01_hello_world/main.jask"
 ```
-Have fun scripting jask!
+[Click here for tutorial 01](https://github.com/jask-lang/tutorials/tree/main/01_hello_world) and have fun scripting jask!
