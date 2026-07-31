@@ -1,0 +1,73 @@
+printLine("1. Print examples for list operations!")
+
+set myList = list(1, 2, 3)
+printLine(listGet(list = myList, index = 0)) ; will access the number element '1'
+
+set myList = listAdd(list = myList, element = 4)
+printLine(myList)
+
+printLine(listGetRange(list = myList, indexStart = 2, indexEnd = 3))
+
+; sets the first element in the list (index 0) to the value -1
+set myList = listSet(myList, 0, -1)
+
+; removes the first element, so value '2' will be on index '0'
+set myList = listRemove(myList, 0)
+printLine(myList)
+
+; reverses the whole list
+set myList = listReverse(list = myList)
+printLine(myList)
+
+; extends the list with another list
+set myList = listExtend(myList, list(1, 0))
+
+; at this point, 'myList' contains [4, 3, 2, 1, 0]
+printLine(myList)
+
+printLine("\n2. Print examples for map operations!")
+
+set myKeys = list("Jules", "Ann", "Peter")
+set myVals = list("31", "24", "69")
+
+set ages = map(keys = myKeys, values = myVals)
+
+set jules = "Jules"
+printLine(jules + " is " + mapGet(map = ages, key = jules) + " years old!")
+
+set ages = mapSet(map = ages, key = "Lucia", value = 31)
+printLine("All ages: " + ages)
+
+for kvp in ages
+    if type(kvp->value == "string")
+        set ages = mapSet(ages, kvp->key, toNumber(kvp->value))
+    endif
+endfor
+
+printLine("Fixed ages as numbers: " + ages)
+
+; we can check if a person exists:
+print("Is Lucia in the map? ")
+if (mapHasKey(ages, "Lucia"))
+    print("Yes, she is!")
+else
+    print("No, she is not...")
+endif
+printLine()
+
+printLine("All persons in the map: " + mapGetKeys(ages))
+printLine("And all ages in the map: " + mapGetValues(ages))
+printLine("The map has a size of " + mapSize(ages))
+
+; we can remove a key-value-pair:
+set ages = mapRemove(map = ages, key = "Jules")
+printLine(ages)
+
+; and we can merge to maps where the second map overwrites possible key conflicts:
+
+set otherAges = map(list("Ulf", "Lucia"), list(95, 21))
+set ages = mapMerge(ages, otherAges)
+
+; now, ages contains ["Ann" = 24, "Peter" = 69, "Lucia" = 21, "Ulf" = 95]
+; note, that the age of Lucia was overwritten by otherAges map
+printLine(ages)
