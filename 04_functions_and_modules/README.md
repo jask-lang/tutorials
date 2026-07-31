@@ -62,3 +62,6 @@ The interpreter needs the *allow-stdout* permission, because we are using *print
 ```bash
 dotnet --allow-stdout --input="main.jask"
 ```
+
+# Continue...
+After mastering _functions and modules_, have a look at [lists and maps](https://github.com/jask-lang/tutorials/tree/main/05_lists_and_maps)!
