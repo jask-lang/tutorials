@@ -5,7 +5,7 @@ Defining a function requires a _name_ and a list of _parameters_:
 ```python
 function myFunction(param1: string, param2: number, param3: any)
     [...]
-end
+endfunction
 ```
 
 Functions should be defined using _lowerCamelCase_ notation.
@@ -13,7 +13,7 @@ A parameter must have a type and can be optionally followed by a default value:
 ```python
 function round(num: number, digits: number = 0)
     [...]
-end
+endfunction
 
 ; will result in 3
 round(num = 3.1415)
@@ -34,7 +34,7 @@ For example, write a file `my_math_functions.jask`:
 ```python
 function calculateDiscount(price: number, percent: number = 10)
     return price - (price * (percent / 100))
-end
+endfunction
 ```
 
 This file can be imported via `use` where using `.jask` at the end of the file is optional:
