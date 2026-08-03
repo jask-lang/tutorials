@@ -17,7 +17,7 @@ jask has a very restricted setup per default, the interpreter needs permissions 
 * **--allow-trust** or **-at** (`trust`)
 * **--allow-all** combines all permissions in one argument
 
-*read* and *write* permissions can be used with or without paths and multiple times to define exactly the paths and files jask is allowed to read or write. One does not have to use '=', values can be passed as a next argument as well:
+*read* and *write* permissions can be used with or without paths and multiple times to define exactly the paths and files jask is allowed to access. One does not have to use '=', values can be passed as a next argument as well:
 ```terminal
 dotnet run --allow-read
 dotnet run --allow-read="sample.jask"
