@@ -2,7 +2,6 @@
 
 # Lists
 A `list` is a data type storing elements ordered in a row:
-TBD:
 ```python
 set myList = list(1, 2, 3)
 ```
