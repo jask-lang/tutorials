@@ -10,10 +10,10 @@ set name = verify(untrusted = rawInput, pattern = "string")
 ```
 This transfers the `untrusted` raw input from `readInput`, which reads a line from `stdin`, to a `Result` struct containing the verifications result:
 ```python
-if name->type == "OK"
-    print("Your name is " + name->value)
+if name.type == "OK"
+    print("Your name is " + name.value)
 else
-    print("Error reading from stdin: " + name->error)
+    print("Error reading from stdin: " + name.error)
 endif
 ```
 

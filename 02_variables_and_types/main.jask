@@ -59,7 +59,7 @@ struct Car
 endstruct
 
 set myCar = Car(brand = "Mercedes Benz", model = "R170", hp = 218)
-printLine("I am driving a " + myCar->brand + " with " + myCar->hp + " horse power.")
+printLine("I am driving a " + myCar.brand + " with " + myCar.hp + " horse power.")
 
 set myCar = myCar update hp = 340
-printLine("Now, my car has " + myCar->hp + " horse power!")
+printLine("Now, my car has " + myCar.hp + " horse power!")

@@ -39,8 +39,8 @@ set ages = mapSet(map = ages, key = "Lucia", value = 31)
 printLine("All ages: " + ages)
 
 for kvp in ages
-    if type(kvp->value == "string")
-        set ages = mapSet(ages, kvp->key, toNumber(kvp->value))
+    if type(kvp.value == "string")
+        set ages = mapSet(ages, kvp.key, toNumber(kvp.value))
     endif
 endfor
 

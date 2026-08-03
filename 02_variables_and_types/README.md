@@ -43,9 +43,9 @@ To instanciate a new struct, initialize a new variable:
 ```python
 set myCar = Car(brand = "Mercedes Benz", model = "R170", hp = 218)
 ```
-Accessing the `struct`s fields (the variables) is done using `->`:
+Accessing the `struct`s fields (the variables) is done using `.`:
 ```python
-print("I am driving a " + myCar->brand)
+print("I am driving a " + myCar.brand)
 ```
 
 Updating a field is easy as well:

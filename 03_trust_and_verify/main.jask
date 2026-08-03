@@ -1,13 +1,13 @@
 set rawInput = readInput("Please enter your name: ")
 set name = verify(untrusted = rawInput, pattern = "string")
 
-if name->type == "OK"
-    print("Your name is " + name->value + ". ")
+if name.type == "OK"
+    print("Your name is " + name.value + ". ")
 else
-    print("Error reading from stdin: " + name->error)
+    print("Error reading from stdin: " + name.error)
 endif
 
-set age = trust(readInput("How old are you, " + name->value + "? "))
+set age = trust(readInput("How old are you, " + name.value + "? "))
 
 ; note that this will fail if the user entered anything else than a number
 ; because trust() will create a string representation based on readInput()

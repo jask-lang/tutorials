@@ -52,8 +52,8 @@ Oh! We made a mistake. We have added Lucias age as a number while the other ages
 We can fix this with a simple `for...in`:
 ```python
 for kvp in ages
-    if type(kvp->value == "string")
-        set ages = mapSet(ages, kvp->key, toNumber(kvp->value))
+    if type(kvp.value == "string")
+        set ages = mapSet(ages, kvp.key, toNumber(kvp.value))
     endif
 endfor
 ```
