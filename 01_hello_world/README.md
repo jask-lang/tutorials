@@ -10,18 +10,18 @@ You can use two functions for printing text to the console:
 These are the two basic functions for stdout.
 jask has a very restricted setup per default, the interpreter needs permissions to do certain operations:
 
-* **--allow-stdout** (`print`, `printLine`)
-* **--allow-stdin** (`readInput`)
-* **--allow-read** (`use` modules, `readFile`)
-* **--allow-write** (`writeFile`)
-* **--allow-trust** (`trust`)
+* **--allow-stdout** or **-ao** (`print`, `printLine`)
+* **--allow-stdin** or **-ai** (`readInput`)
+* **--allow-read** or **-ar** (`use` modules, `readFile`)
+* **--allow-write** or **-aw** (`writeFile`)
+* **--allow-trust** or **-at** (`trust`)
 * **--allow-all** combines all permissions in one argument
 
-*read* and *write* permissions can be used with or without paths and multiple times to define exactly the paths and files jask is allowed to read or write:
+*read* and *write* permissions can be used with or without paths and multiple times to define exactly the paths and files jask is allowed to read or write. One does not have to use '=', values can be passed as a next argument as well:
 ```terminal
 dotnet run --allow-read
 dotnet run --allow-read="sample.jask"
-dotnet run --allow-read="a/path/to/a/directory --allow-write="a_single_file.txt"
+dotnet run --allow-read "a/path/to/a/directory" -aw "a_single_file.txt"
 ```
 Using *allow-read* and *allow-write* without paths enables permissions globally.
 Please note, that the interpreter inherits the permissions of the executing user regarding file access and that writing runtime errors to *stderr* is always possible.
