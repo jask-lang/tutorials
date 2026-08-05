@@ -16,13 +16,12 @@ else
     print("Error reading from stdin: " + name.error)
 endif
 ```
-
-Jask has a number of different patterns to choose from:
+Obviously, this is a bad example, because every read input from stdin will result successfully in a `string`, but jask supports a number of difference patterns to choose from:
 * `string` - verifies that an untrusted variable contains a string
 * `number` - verifies that an untrusted variable contains a number
 * `boolean` - verifies that an untrusted variable contains either true or false
 
-This allows external input to be elegantly converted into usable types during runtime.
+This allows external input to be elegantly converted into usable (and safe!) types during runtime.
 The interpreter is constantly updated to support new patterns to make `verify` even more useful, e.g. it is planned to support safe URL matching in the future.
 
 A variable can be marked `untrust`ed even at runtime, which is useful when working with functions from external or unknown modules and you want to check their return values:
