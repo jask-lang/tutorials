@@ -22,4 +22,8 @@ For example, run tutorial 01 from your *interpreter* directory:
 ```bash
 dotnet run --allow-stdout --input="../tutorials/01_hello_world/main.jask"
 ```
+or if you have installed jask on your system, invoke it directly from this repo:
+```bash
+jask --allow-stdout --input="tutorials/01_hello_world/main.jask"
+```
 [Click here for tutorial 01](https://github.com/jask-lang/tutorials/tree/main/01_hello_world) and have fun scripting jask!
