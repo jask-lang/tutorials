@@ -1,6 +1,6 @@
 # Lesson 1: Hello World!
 Every programming language should introduce itself with a "Hello World!", and jask is no exception.
-In jask, you do not need to import stuff or defining a *main* function.
+In jask, you do not need to import stuff or define a *main* function.
 Just type your code and you are ready to go!
 
 You can use two functions for printing text to the console:
@@ -28,7 +28,7 @@ Please note, that the interpreter inherits the permissions of the executing user
 For now, you do not need to worry too much on all possible permissions, other tutorials will cover them in more detail.
 
 # Run
-The interpreter needs the *allow-stdout* permission, because we are using *print* and *printline*.
+The interpreter needs the *allow-stdout* permission, because we are using *print* and *printLine*.
 ```bash
 dotnet --allow-stdout --input="main.jask"
 ```

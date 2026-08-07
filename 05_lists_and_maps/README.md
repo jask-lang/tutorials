@@ -6,7 +6,7 @@ A `list` is a data type storing elements ordered in a row:
 set myList = list(1, 2, 3)
 ```
 
-It is not required that the list contains the same type of data, a `list` can story any type simultaneously:
+It is not required that the list contains the same type of data, a `list` can store any type simultaneously:
 ```python
 set myList = list(1, "Two", true, list())
 ```
@@ -56,7 +56,7 @@ for kvp in ages
     endif
 endfor
 ```
-When iterating over a `map`, ever iteration receives a `struct` containing the `key` and corresponding `value`, therefore we are calling it a key-value-pair.
+When iterating over a `map`, every iteration receives a `struct` containing the `key` and corresponding `value`, therefore we are calling it a key-value-pair.
 
 There are several more functions for manipulating `map`s. Explore the main.jask from this tutorial and happy coding!
 
