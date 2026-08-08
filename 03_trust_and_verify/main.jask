@@ -1,15 +1,22 @@
-set rawInput = readInput("Please enter your name: ")
-set name = verify(untrusted = rawInput, pattern = "string")
-
-if name.type == "OK"
-    print("Your name is " + name.value + ". ")
-else
-    print("Error reading from stdin: " + name.error)
+set readResult = readInput("Please enter your name: ")
+if readResult.type != "OK"
+    print("Error reading from stdin: " + readResult.error)
+    exit(1)
 endif
 
-set age = trust(readInput("How old are you, " + name.value + "? "))
+set name = verify(untrusted = readResult.value, pattern = "string")
 
-; note that this will fail if the user entered anything else than a number
+if name.type == "OK"
+    printLine("Your name is " + name.value)
+else
+    print("Error verifying untrusted value from stdin: " + name.error)
+    exit(1)
+endif
+
+; pretty risky, because we are trusting the input and access .value which can by nil
+set age = trust(readInput("How old are you, " + name.value + "? ").value)
+
+; note that this will fail with a runtime exception if the user entered anything else than a number
 ; because trust() will create a string representation based on readInput()
 set age = toNumber(age)
 
@@ -22,4 +29,10 @@ else
 endif
 
 ; a quick example on how to verify an untrusted value with a pattern
-printLine("Verified age: " + verify(untrusted = untrust(age), pattern = "number"))
+set verifiedAge = verify(untrusted = untrust(age), pattern = "number")
+
+if verifiedAge.type == "OK"
+    printLine("Verified age: " + verifiedAge.value)
+else
+    printLine("Error verifying age: " + verifiedAge.error)
+endif
