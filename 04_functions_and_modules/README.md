@@ -32,10 +32,11 @@ round(2.71828, 3)
 Modules are jask scripts in separated files which are providing functionalities for other scripts, like a library or framework.
 For example, write a file `my_math_functions.jask`:
 ```python
-function calculateDiscount(price: number, percent: number = 10)
+export function calculateDiscount(price: number, percent: number = 10)
     return price - (price * (percent / 100))
 endfunction
 ```
+The `export` is needed so other jask files can access the function because by default, all functions and structs defined inside a module are private.
 
 This file can be imported via `use` where using `.jask` at the end of the file is optional:
 ```python
