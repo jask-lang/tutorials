@@ -1,0 +1,75 @@
+; Lesson 7: Try / Catch
+; jask error handling with try / catch / endtry
+
+; ------------------------------------------------------------------
+; 1. A try block that succeeds
+;    When nothing goes wrong, the catch block is simply skipped.
+; ------------------------------------------------------------------
+set config = {
+    "host" = "localhost",
+    "port" = 8080
+}
+
+printLine("--- 1. Successful try ---")
+try
+    set host = config["host"]
+    printLine("Connected to " + host)
+catch e
+    printLine("Never reached: " + e.message)
+endtry
+
+; ------------------------------------------------------------------
+; 2. A try block that raises an error
+;    Reading a missing map key raises an error. The catch block
+;    receives it in the error variable e.
+; ------------------------------------------------------------------
+printLine("")
+printLine("--- 2. Caught error ---")
+try
+    set database = config["database"]
+    printLine("Never reached: " + database)
+catch e
+    printLine("An error occurred on line " + e.line)
+    printLine("The error said: " + e.message)
+endtry
+
+; ------------------------------------------------------------------
+; 3. A catch without an error variable
+;    The error variable after 'catch' is optional. Omit it when you
+;    do not need the error details.
+; ------------------------------------------------------------------
+printLine("")
+printLine("--- 3. Bare catch ---")
+try
+    set result = 10 / 0
+catch
+    set recovered = true
+    printLine("Recovered. recovered = " + recovered)
+endtry
+
+; ------------------------------------------------------------------
+; 4. Catching an error raised inside a function
+;    Errors propagate from the function to the caller's try block.
+; ------------------------------------------------------------------
+function divide(a: number, b: number)
+    return a / b
+endfunction
+
+printLine("")
+printLine("--- 4. Error from a function ---")
+try
+    set ok = divide(100, 4)
+    printLine("100 / 4 = " + ok)
+catch e
+    printLine("unexpected: " + e.message)
+endtry
+
+try
+    set bad = divide(100, 0)
+    printLine("Never reached: " + bad)
+catch e
+    printLine("divide() by zero caught: " + e.message)
+endtry
+
+printLine("")
+printLine("All errors were handled - the program kept running.")
