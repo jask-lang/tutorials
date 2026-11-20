@@ -1,0 +1,62 @@
+printLine("--- Conditionals ---")
+
+set score = 85
+
+if score >= 90
+    printLine("Grade: A")
+else if score >= 80
+    printLine("Grade: B")
+else
+    printLine("Grade: C or below")
+endif
+
+set temperature = 28
+if temperature > 30
+    printLine("It is hot today!")
+else if temperature > 20
+    printLine("It is warm today!")
+else
+    printLine("It is cold today!")
+endif
+
+printLine("")
+printLine("--- Logical Operators ---")
+
+set temp = 24
+if temp >= 18 and temp <= 30
+    printLine("Temperature is in comfortable range")
+endif
+
+set raining = false
+set hasUmbrella = true
+if not (raining) or hasUmbrella
+    ; does nothing visible but demonstrates logical operators
+endif
+
+printLine("")
+printLine("--- For Loop ---")
+
+set nums = [1, 2, 3, 4, 5]
+
+for item in nums
+    printLine("Double of " + item + " is " + (item * 2))
+endfor
+
+set sum = 0
+for item in nums
+    set sum = sum + item
+endfor
+printLine("")
+printLine("Sum: " + sum)
+
+printLine("")
+printLine("--- While Loop ---")
+
+set counter = 0
+while counter < 5
+    printLine("Step " + counter)
+    set counter = counter + 1
+endwhile
+
+printLine("")
+printLine("Done!")
