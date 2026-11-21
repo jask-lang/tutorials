@@ -50,7 +50,7 @@ print("I am driving a " + myCar.brand)
 
 Updating a field is easy as well:
 ```python
-set myCar = myCar update hp = 340
+set myCar.hp = 340
 ```
 
 # Run
